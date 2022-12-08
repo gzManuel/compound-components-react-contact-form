@@ -1,5 +1,4 @@
-import {useState} from "react";
-import Form from "./components/Form/Form";
+import ContactForm from "./components/ContactForm";
 import styles from './App.module.css'
 
 function App() {
@@ -10,24 +9,16 @@ function App() {
 
   return (
     <div className={styles.layout}>
-      <header style={}>
+      <header>
         <h1>My Compound design pattern</h1>
       </header>
       <div >
-        <Form onFinish={onFinish}>
-          <Form.Item label={'Password'} name='password'>
-            <Form.Item.Input />
-          </Form.Item>
-          <Form.Item label={'User Name'} name='userName' >
-            <Form.Item.Input />
-          </Form.Item>
-
-          <Form.Item>
-            <Form.Item.Input type='submit'>
-
-            </Form.Item.Input>
-          </Form.Item>
-        </Form>
+        <ContactForm onFinish={onFinish}>
+          <ContactForm.Name/>
+          <ContactForm.Email/>
+          <ContactForm.Phone/>
+          <ContactForm.Comment/>
+        </ContactForm>
       </div>
     </div>
 
