@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {formContext} from '../../context';
 import { setFormHOF } from '../../lib';
 
-const Name = () => {
+const Name = ({required}) => {
     const {formState, setFormState} = useContext(formContext);
 
     const handlerChange = (event) => {
@@ -12,7 +12,7 @@ const Name = () => {
     return (
         <div>
             <label htmlFor='name'>Name</label>
-            <input name='name' id='name' type="text" value={formState.name} onChange={handlerChange}/>
+            <input required={required} name='name' id='name' type="text" value={formState.name} onChange={handlerChange}/>
         </div>
     );
 };

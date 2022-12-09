@@ -14,11 +14,11 @@ function App() {
       </header>
       <div >
         <ContactForm onFinish={onFinish}>
-          <ContactForm.Name/>
+          <ContactForm.Name required/>
           <ContactForm.Gender/>
-          <ContactForm.Email/>
-          <ContactForm.Phone/>
-          <ContactForm.Comment/>
+          <ContactForm.Email required/>
+          <ContactForm.Phone required/>
+          <ContactForm.Comment required/>
         </ContactForm>
       </div>
     </div>

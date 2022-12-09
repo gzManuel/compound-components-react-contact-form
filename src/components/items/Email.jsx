@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {formContext} from '../../context';
 import {setFormHOF} from '../../lib';
 
-const Email = () => {
+const Email = ( {required} ) => {
     const {formState, setFormState} = useContext(formContext);
 
     const handlerChange = (event) => {
@@ -13,7 +13,7 @@ const Email = () => {
         <div>
             <label htmlFor='email'>
                 Email </label>
-            <input type="email" name='name' id='email' value={formState.email} onChange={handlerChange} />
+            <input required={required} type="email" name='name' id='email' value={formState.email} onChange={handlerChange} />
         </div>
     );
 };
