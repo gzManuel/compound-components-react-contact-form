@@ -9,10 +9,14 @@ import {formContext} from '../context';
 
 const {Provider} = formContext;
 
-
-
 const ContactForm = ({onFinish, children}) => {
-    const [formState, setFormState] = useState({});
+    const [formState, setFormState] = useState({
+        name:'',
+        comment:'',
+        email:'',
+        gender:'',
+        phone:''
+    });
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -20,7 +24,7 @@ const ContactForm = ({onFinish, children}) => {
     }
 
     return (
-        <Provider value={formState}>
+        <Provider value={{formState, setFormState}}>
             <form onSubmit={submitHandler} >
                 {children}
                 <button>Send</button>

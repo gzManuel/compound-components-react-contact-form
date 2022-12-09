@@ -1,12 +1,18 @@
 import React, {useContext} from 'react';
-import { formContext } from '../../context';
+import {formContext} from '../../context';
+import { setFormHOF } from '../../lib';
 
 const Name = () => {
-    useContext(formContext);
+    const {formState, setFormState} = useContext(formContext);
+
+    const handlerChange = (event) => {
+        setFormState(setFormHOF('name',event.target.value));
+    }
+
     return (
         <div>
-            <label for='name'>Name</label>
-            <input name='name' id='name' type="text"/>
+            <label htmlFor='name'>Name</label>
+            <input name='name' id='name' type="text" value={formState.name} onChange={handlerChange}/>
         </div>
     );
 };

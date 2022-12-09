@@ -1,13 +1,19 @@
 import React, {useContext} from 'react';
-import { formContext } from '../../context';
+import {formContext} from '../../context';
+import {setFormHOF} from '../../lib';
 
 const Email = () => {
-    useContext(formContext);
+    const {formState, setFormState} = useContext(formContext);
+
+    const handlerChange = (event) => {
+        setFormState(setFormHOF('email',event.target.value));
+    }
+
     return (
         <div>
-            <label for='email'>
+            <label htmlFor='email'>
                 Email </label>
-            <input type="email" name='name' id='email'/>
+            <input type="email" name='name' id='email' value={formState.email} onChange={handlerChange} />
         </div>
     );
 };

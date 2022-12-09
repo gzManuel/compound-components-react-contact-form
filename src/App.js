@@ -15,6 +15,7 @@ function App() {
       <div >
         <ContactForm onFinish={onFinish}>
           <ContactForm.Name/>
+          <ContactForm.Gender/>
           <ContactForm.Email/>
           <ContactForm.Phone/>
           <ContactForm.Comment/>
