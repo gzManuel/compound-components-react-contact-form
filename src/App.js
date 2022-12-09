@@ -10,15 +10,14 @@ function App() {
   return (
     <div className={styles.layout}>
       <header>
-        <h1>My Compound design pattern</h1>
+        <h2>My Compound design pattern</h2>
       </header>
       <div >
         <ContactForm onFinish={onFinish}>
-          <ContactForm.Name required/>
-          <ContactForm.Gender/>
-          <ContactForm.Email required/>
-          <ContactForm.Phone required/>
-          <ContactForm.Comment required/>
+          <ContactForm.Name required />
+          <ContactForm.Email required />
+          <ContactForm.Phone required />
+          <ContactForm.Comment required />
         </ContactForm>
       </div>
     </div>

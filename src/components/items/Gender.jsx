@@ -11,10 +11,10 @@ const Gender = ({required}) => {
 
     return (
         <div>
+            <label htmlFor="gendeMaler">Male</label>
             <input required={required} type="radio" name="gender" id="gendeMaler" value="male" onChange={handlerChange} />
-            <label htmlFor="gendeMaler">male</label>
+            <label htmlFor="genderfemale">Female</label>
             <input required={required} type="radio" name="gender" id="genderfemale" value="female" onChange={handlerChange} />
-            <label htmlFor="genderfemale">female</label>
         </div>
     );
 };
