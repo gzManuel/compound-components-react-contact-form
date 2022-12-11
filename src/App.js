@@ -1,4 +1,5 @@
-import ContactForm from "./compoundDesignPattern/ContactForm";
+// import ContactForm from "./compoundDesignPattern/ContactForm";
+import ContactForm from './components/ContactForm';
 import styles from './App.module.css'
 
 function App() {
@@ -14,10 +15,10 @@ function App() {
       </header>
       <div >
         <ContactForm onFinish={onFinish}>
-          <ContactForm.Name required />
+          {/* <ContactForm.Name required />
           <ContactForm.Email required />
           <ContactForm.Phone required />
-          <ContactForm.Comment required />
+          <ContactForm.Comment required /> */}
         </ContactForm>
       </div>
     </div>
