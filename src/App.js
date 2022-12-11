@@ -1,4 +1,4 @@
-import ContactForm from "./components/ContactForm";
+import ContactForm from "./compoundDesignPattern/ContactForm";
 import styles from './App.module.css'
 
 function App() {
